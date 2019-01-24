@@ -1,0 +1,54 @@
+2019-01-24 12:04:57 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROYECTOS" not found; SQL statement:
+CREATE TABLE `tareas`(
+   `id` int(10) NOT NULL AUTO_INCREMENT,
+   `nombre` varchar(50) NOT NULL,
+   `pr_id` int(10) NOT NULL,
+   `fechalimite` DATE NOT NULL,
+   `username` varchar(20) NOT NULL,
+   `fechafinalizacion` DATE,
+   PRIMARY KEY (`id`),
+   FOREIGN KEY (`username`) REFERENCES `users`(`id`),
+   FOREIGN KEY (`pr_id`) REFERENCES `proyectos`(`id`)
+) [42102-197]
+2019-01-24 12:07:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE `proyectos`(
+   `id` int(10) NOT NULL AUTO_INCREMENT,
+   `modification_counter INTEGER NOT NULL,
+   `nombre` varchar(50) NOT NULL,
+   PRIMARY KEY (`id[*]`)
+)"; SQL statement:
+CREATE TABLE `proyectos`(
+   `id` int(10) NOT NULL AUTO_INCREMENT,
+   `modification_counter INTEGER NOT NULL,
+   `nombre` varchar(50) NOT NULL,
+   PRIMARY KEY (`id`)
+) [42000-197]
+2019-01-24 12:09:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE 'users'[*](
+   'id' INT (10) NOT NULL AUTO_INCREMENT,
+   'username' VARCHAR(20) NOT NULL,
+   'role' VARCHAR(20) NOT NULL,
+   'password' CHAR(64) NOT NULL,
+   PRIMARY KEY ('id')
+) "; expected "identifier"; SQL statement:
+CREATE TABLE 'users'(
+   'id' int (10) NOT NULL AUTO_INCREMENT,
+   'username' varchar(20) NOT NULL,
+   'role' varchar(20) NOT NULL,
+   'password' char(64) NOT NULL,
+   PRIMARY KEY ('id')
+) [42001-197]
+2019-01-24 13:00:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE PROYECTOS(
+   ID INT(10) NOT NULL AUTO_INCREMENT,
+   NOMBRE VARCHAR(50) NOT NULL,
+    MODIFICATION_COUNTER INTEGER NOT NUL[*]
+   PRIMARY KEY (ID)
+) "; expected "NULL"; SQL statement:
+CREATE TABLE Proyectos(
+   id int(10) NOT NULL AUTO_INCREMENT,
+   nombre varchar(50) NOT NULL,
+    modification_counter INTEGER NOT NUL
+   PRIMARY KEY (id)
+) [42001-197]
