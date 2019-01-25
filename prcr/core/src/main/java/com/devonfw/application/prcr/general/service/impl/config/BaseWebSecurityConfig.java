@@ -66,7 +66,15 @@ public abstract class BaseWebSecurityConfig extends WebSecurityConfigurerAdapter
   @Override
   public void configure(HttpSecurity http) throws Exception {
 
-    String[] unsecuredResources = new String[] { "/login", "/security/**", "/services/rest/login",
+
+	  http.authorizeRequests().anyRequest().permitAll().and().csrf().disable();
+
+	  if (this.corsEnabled) {
+	    http.addFilterBefore(getCorsFilter(), CsrfFilter.class);
+	  }
+
+
+   /* String[] unsecuredResources = new String[] { "/login", "/security/**", "/services/rest/login",
     "/services/rest/logout" };
 
     http
@@ -91,7 +99,7 @@ public abstract class BaseWebSecurityConfig extends WebSecurityConfigurerAdapter
 
     if (this.corsEnabled) {
       http.addFilterBefore(getCorsFilter(), CsrfFilter.class);
-    }
+    }*/
   }
 
   /**
