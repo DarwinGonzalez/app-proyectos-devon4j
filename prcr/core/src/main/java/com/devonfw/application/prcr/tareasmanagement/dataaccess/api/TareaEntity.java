@@ -49,10 +49,6 @@ public class TareaEntity extends ApplicationPersistenceEntity implements Tarea {
 		this.pr_id = pr_id;
 	}
 
-	public LocalDate getFechalimite1() {
-		return fechalimite;
-	}
-
 	public void setFechalimite(LocalDate fechalimite) {
 		this.fechalimite = fechalimite;
 	}
@@ -65,10 +61,6 @@ public class TareaEntity extends ApplicationPersistenceEntity implements Tarea {
 
 	public void setUsername(UserEntity username) {
 		this.username = username;
-	}
-
-	public LocalDate getFechafinalizacion1() {
-		return fechafinalizacion;
 	}
 
 	public void setFechafinalizacion(LocalDate fechafinalizacion) {

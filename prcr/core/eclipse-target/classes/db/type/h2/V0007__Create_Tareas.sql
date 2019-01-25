@@ -1,9 +1,9 @@
 CREATE TABLE Tareas(
    id BIGINT NOT NULL AUTO_INCREMENT,
    nombre varchar(50) NOT NULL,
-   pr_id int(10) NOT NULL,
+   pr_id BIGINT NOT NULL,
    fechalimite DATE NOT NULL,
-   username varchar(20) NOT NULL,
+   username BIGINT NOT NULL,
    fechafinalizacion DATE,
    modificationCounter INTEGER NOT NULL,
    PRIMARY KEY (id),
