@@ -34,6 +34,8 @@ public interface UsermanagementRestService {
 	@Path("/user/{id}/")
 	public UserEto getUser(@PathParam("id") long id);
 
+
+
 	/**
 	 * Delegates to {@link Usermanagement#saveUser}.
 	 *
