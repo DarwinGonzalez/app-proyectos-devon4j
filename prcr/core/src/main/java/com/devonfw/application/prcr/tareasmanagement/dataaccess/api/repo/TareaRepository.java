@@ -61,7 +61,7 @@ public interface TareaRepository extends DefaultRepository<TareaEntity> {
 
 	/**
 	 * Add sorting to the given query on the given alias
-	 *
+	 * 
 	 * @param query to add sorting to
 	 * @param alias to retrieve columns from for sorting
 	 * @param sort  specification of sorting
@@ -114,5 +114,4 @@ public interface TareaRepository extends DefaultRepository<TareaEntity> {
 		}
 	}
 
-	public void deleteByProyectoEntity_id(Long id);
 }
