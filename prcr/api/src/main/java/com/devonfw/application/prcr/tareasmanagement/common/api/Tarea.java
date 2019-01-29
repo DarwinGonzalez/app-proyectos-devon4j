@@ -31,12 +31,12 @@ public interface Tarea extends ApplicationEntity {
 	/**
 	 * @return fechalimiteId
 	 */
-	public LocalDate getFechalimite();
+	// public LocalDate getFechalimite();
 
 	/**
 	 * @param fechalimite setter for fechalimite attribute
 	 */
-	public void setFechalimite(LocalDate fechalimite);
+	// public void setFechalimite(LocalDate fechalimite);
 
 	/**
 	 * getter for usernameId attribute
@@ -53,11 +53,11 @@ public interface Tarea extends ApplicationEntity {
 	/**
 	 * @return fechafinalizacionId
 	 */
-	public LocalDate getFechafinalizacion();
+	// public LocalDate getFechafinalizacion();
 
 	/**
 	 * @param fechafinalizacion setter for fechafinalizacion attribute
 	 */
-	public void setFechafinalizacion(LocalDate fechafinalizacion);
+	// public void setFechafinalizacion(LocalDate fechafinalizacion);
 
 }

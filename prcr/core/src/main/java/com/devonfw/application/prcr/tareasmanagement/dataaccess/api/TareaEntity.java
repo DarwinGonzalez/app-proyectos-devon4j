@@ -111,12 +111,12 @@ public class TareaEntity extends ApplicationPersistenceEntity implements Tarea {
 		}
 	}
 
-	@Override
+
 	public LocalDate getFechalimite() {
 		return fechalimite;
 	}
 
-	@Override
+
 	public LocalDate getFechafinalizacion() {
 		return fechafinalizacion;
 	}

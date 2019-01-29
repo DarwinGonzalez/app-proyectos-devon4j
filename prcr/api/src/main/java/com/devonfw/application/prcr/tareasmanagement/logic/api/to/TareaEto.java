@@ -42,12 +42,17 @@ public class TareaEto extends AbstractEto implements Tarea {
 		this.pr_idId = pr_idId;
 	}
 
-	@Override
-	public LocalDate getFechalimite() {
-		return fechalimite;
+
+	public String getFechalimite() {
+		if (fechalimite == null) {
+			return null;
+		} else {
+			return fechalimite.toString();
+		}
+
 	}
 
-	@Override
+
 	public void setFechalimite(LocalDate fechalimite) {
 		this.fechalimite = fechalimite;
 	}
@@ -62,12 +67,17 @@ public class TareaEto extends AbstractEto implements Tarea {
 		this.usernameId = usernameId;
 	}
 
-	@Override
-	public LocalDate getFechafinalizacion() {
-		return fechafinalizacion;
+
+	public String getFechafinalizacion() {
+		if (fechafinalizacion == null) {
+			return null;
+		} else {
+			return fechafinalizacion.toString();
+		}
+
 	}
 
-	@Override
+
 	public void setFechafinalizacion(LocalDate fechafinalizacion) {
 		this.fechafinalizacion = fechafinalizacion;
 	}
