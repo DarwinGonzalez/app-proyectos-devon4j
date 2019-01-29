@@ -35,6 +35,17 @@ public interface TareasmanagementRestService {
 	public TareaEto getTareaEto(@PathParam("id") long id);
 
 	/**
+	 * Delegates to {@link Tareasmanagement#findTareaEtos}.
+	 *
+	 * @param searchCriteriaTo the pagination and search criteria to be used for
+	 *                         finding tareas.
+	 * @return the {@link Page list} of matching {@link TareaEto}s.
+	 */
+	@Path("/tarea/eto/search")
+	@POST
+	public Page<TareaEto> findTareaEtos(TareaSearchCriteriaTo searchCriteriaTo);
+
+	/**
 	 * Delegates to {@link Tareasmanagement#findTareaCto}.
 	 *
 	 * @param id the ID of the {@link TareaCto}

@@ -19,6 +19,14 @@ public interface UcFindTarea {
 	TareaEto findTareaEto(long id);
 
 	/**
+	 * Returns a paginated list of composite Tareas matching the search criteria.
+	 *
+	 * @param criteria the {@link TareaSearchCriteriaTo}.
+	 * @return the {@link List} of matching {@link TareaCto}s.
+	 */
+	Page<TareaEto> findTareaEtos(TareaSearchCriteriaTo criteria);
+
+	/**
 	 * Returns a composite Tarea by its id 'id'.
 	 *
 	 * @param id The id 'id' of the Tarea.

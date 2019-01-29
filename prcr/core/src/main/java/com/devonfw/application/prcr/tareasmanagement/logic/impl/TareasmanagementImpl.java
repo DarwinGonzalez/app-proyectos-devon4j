@@ -37,4 +37,10 @@ public class TareasmanagementImpl extends AbstractComponentFacade implements Tar
 	public TareaEto findTareaEto(long id) {
 		return ucFindTarea.findTareaEto(id);
 	}
+
+	@Override
+	public Page<TareaEto> findTareaEtos(TareaSearchCriteriaTo criteria) {
+
+		return ucFindTarea.findTareaEtos(criteria);
+	}
 }

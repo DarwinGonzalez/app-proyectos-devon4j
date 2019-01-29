@@ -35,4 +35,10 @@ public class TareasmanagementRestServiceImpl implements TareasmanagementRestServ
 	public Page<TareaCto> findTareaCtos(TareaSearchCriteriaTo searchCriteriaTo) {
 		return this.tareasmanagement.findTareaCtos(searchCriteriaTo);
 	}
+
+	@Override
+	public Page<TareaEto> findTareaEtos(TareaSearchCriteriaTo searchCriteriaTo) {
+		return this.tareasmanagement.findTareaEtos(searchCriteriaTo);
+	}
+
 }

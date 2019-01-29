@@ -70,4 +70,18 @@ public class UcFindTareaImpl extends AbstractTareaUc implements UcFindTarea {
 
 		return new PageImpl<>(ctos, pagResultTo, tareas.getTotalElements());
 	}
+
+	@Override
+	public Page<TareaEto> findTareaEtos(TareaSearchCriteriaTo criteria) {
+
+		Page<TareaEntity> tareas = getTareaRepository().findByCriteria(criteria);
+		List<TareaEto> etos = new ArrayList<>();
+		for (TareaEntity entity : tareas.getContent()) {
+			etos.add(getBeanMapper().map(entity, TareaEto.class));
+		}
+		Pageable pagResultTo = PageRequest.of(criteria.getPageable().getPageNumber(),
+				criteria.getPageable().getPageSize());
+
+		return new PageImpl<>(etos, pagResultTo, tareas.getTotalElements());
+	}
 }
