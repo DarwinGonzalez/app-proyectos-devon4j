@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 
 import com.devonfw.application.prcr.tareasmanagement.logic.api.Tareasmanagement;
 import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaCto;
+import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaEto;
 import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaSearchCriteriaTo;
 import com.devonfw.application.prcr.tareasmanagement.service.api.rest.TareasmanagementRestService;
 
@@ -16,6 +17,11 @@ import com.devonfw.application.prcr.tareasmanagement.service.api.rest.Tareasmana
  */
 @Named("TareasmanagementRestService")
 public class TareasmanagementRestServiceImpl implements TareasmanagementRestService {
+
+	@Override
+	public TareaEto getTareaEto(long id) {
+		return this.tareasmanagement.findTareaEto(id);
+	}
 
 	@Inject
 	private Tareasmanagement tareasmanagement;

@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import com.devonfw.application.prcr.general.logic.base.AbstractComponentFacade;
 import com.devonfw.application.prcr.tareasmanagement.logic.api.Tareasmanagement;
 import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaCto;
+import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaEto;
 import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaSearchCriteriaTo;
 import com.devonfw.application.prcr.tareasmanagement.logic.api.usecase.UcFindTarea;
 
@@ -30,5 +31,10 @@ public class TareasmanagementImpl extends AbstractComponentFacade implements Tar
 	public Page<TareaCto> findTareaCtos(TareaSearchCriteriaTo criteria) {
 
 		return ucFindTarea.findTareaCtos(criteria);
+	}
+
+	@Override
+	public TareaEto findTareaEto(long id) {
+		return ucFindTarea.findTareaEto(id);
 	}
 }

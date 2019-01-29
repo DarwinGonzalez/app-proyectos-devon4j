@@ -35,6 +35,13 @@ public class UcFindTareaImpl extends AbstractTareaUc implements UcFindTarea {
 	private static final Logger LOG = LoggerFactory.getLogger(UcFindTareaImpl.class);
 
 	@Override
+	public TareaEto findTareaEto(long id) {
+		LOG.debug("Get TareaEto with id {} from database.", id);
+		TareaEntity entity = getTareaRepository().find(id);
+		return getBeanMapper().map(entity, TareaEto.class);
+	}
+
+	@Override
 	public TareaCto findTareaCto(long id) {
 		LOG.debug("Get TareaCto with id {} from database.", id);
 		TareaEntity entity = getTareaRepository().find(id);
