@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 
 import com.devonfw.application.prcr.tareasmanagement.logic.api.Tareasmanagement;
 import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaCto;
+import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaEto;
 import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaSearchCriteriaTo;
 
 /**
@@ -22,6 +23,16 @@ import com.devonfw.application.prcr.tareasmanagement.logic.api.to.TareaSearchCri
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface TareasmanagementRestService {
+
+	/**
+	 * Delegates to {@link Tareasmanagement#findTareaEto}.
+	 *
+	 * @param id the ID of the {@link TareaEto}
+	 * @return the {@link TareaEto}
+	 */
+	@GET
+	@Path("/tarea/eto/{id}/")
+	public TareaEto getTareaEto(@PathParam("id") long id);
 
 	/**
 	 * Delegates to {@link Tareasmanagement#findTareaCto}.
