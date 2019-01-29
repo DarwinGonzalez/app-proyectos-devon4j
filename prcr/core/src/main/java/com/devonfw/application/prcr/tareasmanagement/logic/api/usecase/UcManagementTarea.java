@@ -4,7 +4,7 @@ public interface UcManagementTarea {
 
 	Boolean deleteTarea(Long id);
 
-	Boolean saveTarea(Long id);
+	// Boolean saveTarea(Long id);
 
 
 

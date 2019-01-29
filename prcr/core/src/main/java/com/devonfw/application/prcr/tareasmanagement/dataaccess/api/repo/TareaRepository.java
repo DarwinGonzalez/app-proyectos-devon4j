@@ -113,5 +113,7 @@ public interface TareaRepository extends DefaultRepository<TareaEntity> {
 			}
 		}
 	}
+	
+	public Boolean deleteById(long id);
 
 }
